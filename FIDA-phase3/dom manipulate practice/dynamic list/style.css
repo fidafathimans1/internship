@@ -1,0 +1,4 @@
+.box { border: 1px solid #ccc; padding: 15px; width: 250px; margin-bottom: 20px; }
+input { padding: 5px; margin-bottom: 10px; width: 80%; }
+button { background: #008cba; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+ul { margin-top: 10px; padding-left: 20px; }
