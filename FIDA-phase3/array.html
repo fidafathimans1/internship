@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Array Methods</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .box { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; background: #f9f9f9; }
+        button { margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Array Methods Demo</h2>
+    
+    <div class="box">
+        <strong>Current Array:</strong>
+        <p id="array-display"></p>
+    </div>
+
+    <button onclick="addItem()">Push (Add item)</button>
+    <button onclick="removeItem()">Pop (Remove item)</button>
+    <button onclick="showUpper()">Map (Make Uppercase)</button>
+    <button onclick="showFilter()">Filter (Short names only)</button>
+
+    <script>
+        
+        let fruits = ["Apple", "Orange", "Mango"];
+
+        
+        function updateDisplay(arr) {
+            document.getElementById("array-display").innerText = JSON.stringify(arr);
+        }
+
+        
+        function addItem() {
+            fruits.push("Banana");
+            updateDisplay(fruits);
+        }
+
+        
+        function removeItem() {
+            fruits.pop();
+            updateDisplay(fruits);
+        }
+
+    
+        function showUpper() {
+            let upperFruits = fruits.map(f => f.toUpperCase());
+            updateDisplay(upperFruits);
+        }
+
+        
+        function showFilter() {
+            let filteredFruits = fruits.filter(f => f.length <= 5);
+            updateDisplay(filteredFruits);
+        }
+
+        
+        updateDisplay(fruits);
+
+    </script>
+</body>
+</html>
