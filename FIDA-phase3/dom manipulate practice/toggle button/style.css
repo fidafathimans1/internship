@@ -1,0 +1,32 @@
+/* Basic styling */
+.container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+/* Styles applied when toggled */
+.box.active {
+    background-color: #4CAF50;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
